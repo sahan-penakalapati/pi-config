@@ -1,0 +1,68 @@
+{
+  "lastChangelogVersion": "0.61.1",
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-opus-4-6",
+  "defaultThinkingLevel": "minimal",
+  "packages": [
+    "git:github.com/nicobailon/pi-mcp-adapter",
+    {
+      "source": "git:github.com/HazAT/pi-smart-sessions",
+      "extensions": [
+        "+extensions/smart-sessions.ts"
+      ]
+    },
+    {
+      "source": "git:github.com/HazAT/pi-parallel",
+      "extensions": [
+        "+extension/index.ts"
+      ]
+    },
+    "git:github.com/pasky/chrome-cdp-skill",
+    "git:github.com/HazAT/glimpse",
+    "git:github.com/HazAT/pi-interactive-subagents",
+    "git:github.com/HazAT/pi-autoresearch",
+    "npm:pi-per-model-prompt",
+    "npm:@jordyvd/pi-openai-compaction",
+    "npm:pi-timer",
+    "npm:@arpagon/pi-web-providers",
+    "npm:@hyperprior/pi-ask",
+    "npm:@hyperprior/pi-ssh",
+    "npm:pi-ghostty",
+    {
+      "source": "npm:@ifi/oh-pi-extensions",
+      "extensions": [
+        "-extensions/bg-process.ts"
+      ]
+    },
+    {
+      "source": "npm:oh-pi",
+      "extensions": [
+        "-extensions/safe-guard.ts"
+      ]
+    },
+    "npm:pi-cmux"
+  ],
+  "hideThinkingBlock": false,
+  "extensions": [
+    "extensions/restart/index.ts",
+    "extensions/answer/index.ts",
+    "extensions/claude-tool/index.ts",
+    "extensions/cost/index.ts",
+    "extensions/execute-command/index.ts",
+    "extensions/todos/index.ts",
+    "extensions/watchdog/index.ts",
+    "extensions/pi-mono/diff.ts",
+    "extensions/pi-mono/files.ts",
+    "extensions/pi-mono/prompt-url-widget.ts",
+    "extensions/pi-mono/redraws.ts",
+    "extensions/pi-mono/tps.ts"
+  ],
+  "images": {
+    "blockImages": false
+  },
+  "showHardwareCursor": true,
+  "steeringMode": "all",
+  "followUpMode": "all",
+  "treeFilterMode": "default",
+  "theme": "catppuccin-mocha"
+}

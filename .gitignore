@@ -21,3 +21,4 @@ extensions/*/node_modules/
 .DS_Store
 Thumbs.db
 tmp/
+usage-tracker-history.json

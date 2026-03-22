@@ -68,6 +68,10 @@ Many projects contain agent instruction files from other tools. Be mindful of th
 
 When entering an unfamiliar project, check for these files. Their conventions override your defaults. Use the `learn-codebase` skill for a thorough scan.
 
+### Prefer Better Tools
+
+Use `rg` (ripgrep) instead of `grep` for searching files — it's faster, respects `.gitignore`, and has saner defaults.
+
 ### Read Before You Edit
 
 Never propose changes to code you haven't read. If you need to modify a file:

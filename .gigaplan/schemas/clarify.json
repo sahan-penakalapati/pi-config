@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "context": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "question",
+          "context"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "refined_idea": {
+      "type": "string"
+    },
+    "intent_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "questions",
+    "refined_idea",
+    "intent_summary"
+  ],
+  "additionalProperties": false
+}

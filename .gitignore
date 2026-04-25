@@ -17,8 +17,23 @@ session-manager-config.toml
 # Extension dependencies (install locally)
 extensions/*/node_modules/
 
+# Runtime/local files
+pi-crash.log
+update-cache.json
+.update-check
+mcp.json
+
 # OS files
 .DS_Store
 Thumbs.db
 tmp/
-usage-tracker-history.json
+usage-tracker-*.json
+
+# Runtime-generated state (ant colony, session bridge, gigaplan runs, scheduler)
+ant-colony/
+runtime/
+cache/
+.gigaplan/plans/
+scheduler/
+
+sentry.json

@@ -72,10 +72,10 @@ Example output:
   ]
 }`;
 
-const HAIKU_MODEL_ID = "claude-haiku-4-5";
+const EXTRACTION_MODEL_ID = "claude-sonnet-4-6";
 
 /**
- * Prefer Haiku for extraction (fast, cheap), otherwise fallback to the current model.
+ * Prefer Sonnet for extraction, otherwise fallback to the current model.
  */
 async function selectExtractionModel(
 	currentModel: Model<Api>,
@@ -84,11 +84,11 @@ async function selectExtractionModel(
 		getApiKey: (model: Model<Api>) => Promise<string | undefined>;
 	},
 ): Promise<Model<Api>> {
-	const haikuModel = modelRegistry.find("anthropic", HAIKU_MODEL_ID);
-	if (haikuModel) {
-		const apiKey = await modelRegistry.getApiKey(haikuModel);
+	const extractionModel = modelRegistry.find("anthropic", EXTRACTION_MODEL_ID);
+	if (extractionModel) {
+		const apiKey = await modelRegistry.getApiKey(extractionModel);
 		if (apiKey) {
-			return haikuModel;
+			return extractionModel;
 		}
 	}
 

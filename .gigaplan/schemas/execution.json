@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "output": {
+      "type": "string"
+    },
+    "files_changed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "commands_run": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deviations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "output",
+    "files_changed",
+    "commands_run",
+    "deviations"
+  ],
+  "additionalProperties": false
+}

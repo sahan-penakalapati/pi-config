@@ -1,63 +1,59 @@
 {
-  "lastChangelogVersion": "0.61.1",
-  "defaultProvider": "anthropic",
-  "defaultModel": "claude-opus-4-6",
-  "defaultThinkingLevel": "minimal",
+  "lastChangelogVersion": "0.70.2",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.4",
+  "defaultThinkingLevel": "high",
   "packages": [
-    "git:github.com/nicobailon/pi-mcp-adapter",
-    {
-      "source": "git:github.com/HazAT/pi-smart-sessions",
-      "extensions": [
-        "+extensions/smart-sessions.ts"
-      ]
-    },
-    {
-      "source": "git:github.com/HazAT/pi-parallel",
-      "extensions": [
-        "+extension/index.ts"
-      ]
-    },
+    "-git:github.com/nicobailon/pi-mcp-adapter",
     "git:github.com/pasky/chrome-cdp-skill",
     "git:github.com/HazAT/glimpse",
-    "git:github.com/HazAT/pi-interactive-subagents",
     "git:github.com/HazAT/pi-autoresearch",
-    "npm:pi-per-model-prompt",
-    "npm:@jordyvd/pi-openai-compaction",
-    "npm:pi-timer",
     "npm:@arpagon/pi-web-providers",
-    "npm:@hyperprior/pi-ask",
     "npm:@hyperprior/pi-ssh",
     "npm:pi-ghostty",
-    {
-      "source": "npm:@ifi/oh-pi-extensions",
-      "extensions": [
-        "-extensions/bg-process.ts"
-      ]
-    },
-    {
-      "source": "npm:oh-pi",
-      "extensions": [
-        "-extensions/safe-guard.ts"
-      ]
-    },
     "npm:pi-cmux",
-    "git:github.com/umgbhalla/pi-megaplan"
+    "../../hub/pi-interactive-subagents",
+    "git:github.com/umgbhalla/pi-openai-compaction",
+    "-npm:pi-context",
+    "npm:pi-updater",
+    "npm:@ifi/pi-spec",
+    "npm:@ifi/oh-pi-themes",
+    "npm:@ifi/pi-web-remote",
+    "git:https://github.com/baggiiiie/pi-stuff",
+    "npm:@marckrenn/pi-sub-bar",
+    "-npm:@ogulcancelik/pi-session-recall",
+    "npm:@sherif-fanous/pi-rtk",
+    "-npm:pi-repl",
+    {
+      "source": "npm:pi-pai",
+      "extensions": [
+        "-src/extension.ts"
+      ]
+    },
+    "npm:pi-exa-search",
+    "git:github.com/umgbhalla/pi-sentry",
+    "npm:@the-forge-flow/fff-pi",
+    "npm:@heyhuynhgiabuu/pi-diff",
+    "git:github.com/supabitapp/supaterm-skills",
+    "../../hub/pi-per-model-prompt",
+    "npm:pi-system-reminders"
   ],
   "hideThinkingBlock": false,
   "extensions": [
     "extensions/restart/index.ts",
-    "extensions/answer/index.ts",
-    "extensions/claude-tool/index.ts",
     "extensions/cost/index.ts",
-    "extensions/execute-command/index.ts",
     "extensions/todos/index.ts",
     "extensions/watchdog/index.ts",
+    "extensions/slim-skills.ts",
+    "-extensions/claude-tool/index.ts",
+    "-extensions/execute-command/index.ts",
     "extensions/pi-mono/diff.ts",
     "extensions/pi-mono/files.ts",
     "extensions/pi-mono/prompt-url-widget.ts",
     "extensions/pi-mono/redraws.ts",
     "extensions/pi-mono/tps.ts",
-    "extensions/idle-nudge/index.ts"
+    "-extensions/session-bridge/index.ts",
+    "-extensions/dangerous-command-notify.ts"
   ],
   "images": {
     "blockImages": false
@@ -65,6 +61,29 @@
   "showHardwareCursor": true,
   "steeringMode": "all",
   "followUpMode": "all",
-  "treeFilterMode": "default",
-  "theme": "catppuccin-mocha"
+  "treeFilterMode": "user-only",
+  "theme": "oh-p-dark",
+  "voice": {
+    "version": 2,
+    "enabled": true,
+    "language": "en",
+    "scope": "global",
+    "backend": "local",
+    "localModel": "parakeet-v3",
+    "onboarding": {
+      "completed": true,
+      "schemaVersion": 2,
+      "completedAt": "2026-03-24T11:35:12.098Z",
+      "source": "migration"
+    }
+  },
+  "collapseChangelog": true,
+  "quietStartup": true,
+  "doubleEscapeAction": "tree",
+  "transport": "auto",
+  "terminal": {
+    "clearOnShrink": false
+  },
+  "autocompleteMaxVisible": 10,
+  "editorPaddingX": 4
 }

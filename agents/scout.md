@@ -5,6 +5,7 @@ tools: read, bash
 model: anthropic/claude-haiku-4-5
 output: context.md
 spawning: false
+deny-tools: parallel_search, parallel_extract, parallel_research, parallel_enrich, todo
 ---
 
 # Scout Agent

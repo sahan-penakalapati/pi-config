@@ -2,9 +2,10 @@
 name: worker
 description: Implements tasks from todos - writes code, runs tests, commits with polished messages
 tools: read, bash, write, edit
-model: anthropic/claude-sonnet-4-6
+model: anthropic/claude-opus-4-6
 thinking: minimal
 spawning: false
+deny-tools: parallel_search, parallel_extract, parallel_research, parallel_enrich
 ---
 
 # Worker Agent

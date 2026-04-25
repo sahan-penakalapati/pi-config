@@ -122,7 +122,7 @@ Respond ONLY with valid JSON, no other text, no markdown fences:
         "--no-session",
         "--no-tools",
         "--model",
-        "anthropic/claude-haiku-3-5",
+        "anthropic/claude-sonnet-4-6",
         judgePrompt,
       ],
       { timeout: 30000 }

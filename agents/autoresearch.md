@@ -2,9 +2,10 @@
 name: autoresearch
 description: Autonomous experiment worker — runs a batch of autoresearch experiments, then self-terminates
 tools: read, bash, write, edit
-model: anthropic/claude-opus-4-6
+model: gpt-5.4
 thinking: medium
 spawning: false
+deny-tools: parallel_search, parallel_extract, parallel_research, parallel_enrich, todo
 ---
 
 # Autoresearch Worker

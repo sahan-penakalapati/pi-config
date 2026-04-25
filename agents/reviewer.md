@@ -2,9 +2,10 @@
 name: reviewer
 description: Code review agent - reviews changes for quality, security, and correctness
 tools: read, bash
-model: anthropic/claude-opus-4-6
+model: openai-codex/gpt-5.3-codex
 thinking: medium
 spawning: false
+deny-tools: parallel_search, parallel_extract, parallel_research, parallel_enrich, todo
 ---
 
 # Reviewer Agent
